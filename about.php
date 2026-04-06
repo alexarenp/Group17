@@ -12,8 +12,8 @@
     <br>
 
     <div class="about">
-    <p><strong>Alexander Fisher</strong></p>
-    <p>Computer Science major at CSU. I find web development interesting because of the many designs and styles that can be used to create a website. </p>
+        <p><strong>Alexander Fisher</strong></p>
+        <p>Computer Science major at CSU. I find web development interesting because of the many designs and styles that can be used to create a website. </p>
     </div>
     <img src="pictures/fisher.alexander.photo.jpg" alt="Alexander Fisher" height = "300px" width = "200px">
     <br>
@@ -22,6 +22,12 @@
         <p>I am a senior majoring in Computer Science. I am from Fort Collins CO. I have two brothers and I love hiking and playing piano.</p>
     </div>
     <img src="pictures/alexarp.jpg" alt="Alexa Parker" height = "300px" width = "200px">
+    <br>
+    <div class="about">
+        <p><strong>Rhett Long</strong></p>
+        <p>I am a Computer Science major at CSU graduating this spring. I love the outdoors as well as a good TV show or movie.</p>
+    </div>
+    <img src="pictures/rhettcl.jpg" alt="Rhett Long" height = "300px" width = "200px">
     <br>
 </body>
 </html>
