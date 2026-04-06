@@ -18,6 +18,20 @@
         <br>
         <button type="submit">Submit</button>
     </form>
+        <?php
+        if(isset($_GET['gridSize'])) { 
+            $gridSize = $_GET['gridSize'];
+            if($gridSize < 1 || $gridSize > 26) {
+                echo "Not able to create a table with these values. Please input values between 1 and 26.";
+            }
+        }
+        if(isset($_GET['numColors'])) {
+            $numColors = $_GET['numColors'];
+            if($numColors < 1 || $numColors > 10) {
+                echo "Not able to create a table with these values. Please specify a number of colors between 1 and 10.";
+            }
+        }
+    ?>
 </body>
 </html>
 
