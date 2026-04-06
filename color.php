@@ -19,20 +19,17 @@
         <button type="submit">Submit</button>
     </form>
         <?php
-        $rows_and_columns = 0;
-        $colors = 0;
-        if(isset($_GET['Rows and Columns'])) { 
-            $rows_and_columns = $_GET['Rows and Columns'];
+        if(isset($_GET['gridSize'])) { 
+            $gridSize = $_GET['gridSize'];
+            if($gridSize < 1 || $gridSize > 26) {
+                echo "Not able to create a table with these values. Please input values between 1 and 26.";
+            }
         }
-        if(isset($_GET['Colors'])) {
-            $colors = $_GET['Colors'];
-        }
-        if($rows_and_columns < 1 || $rows_and_columns > 26) {
-            echo "Not able to create a table with these values. Please input values between 1 and 26.";
-        }
-        if($colors < 1 || $colors > 10) {
-
-            echo "Not able to create a table with these values. Please specify a number of colors between 1 and 10.";
+        if(isset($_GET['numColors'])) {
+            $numColors = $_GET['numColors'];
+            if($numColors < 1 || $numColors > 10) {
+                echo "Not able to create a table with these values. Please specify a number of colors between 1 and 10.";
+            }
         }
     ?>
 </body>
