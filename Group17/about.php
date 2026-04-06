@@ -16,7 +16,12 @@
     <p>Computer Science major at CSU. I find web development interesting because of the many designs and styles that can be used to create a website. </p>
     </div>
     <img src="pictures/fisher.alexander.photo.jpg" alt="Alexander Fisher" height = "300px" width = "200px">
-
+    <br>
+    <div class="alexa about">
+        <p><strong>Alexa Parker</strong></p>
+        <p>I am a senior majoring in Computer Science. I am from Fort Collins CO. I have two brothers and I love hiking and playing piano.</p>
+    </div>
+    <img src="pictures/alexarp.jpg" alt="Alexa Parker" height = "300px" width = "200px">
     <br>
 </body>
 </html>
