@@ -5,11 +5,12 @@ COLORS:
 #F5EE9E - Light Yellow
 #F49E4C - Orange
 #AB3428 - Red
+#061B6F - Darker Blue (better for contrast)
 */
 
 h1{
     text-align: center;
-    color: #AB3428;
+    color: #061B6F;
 }
 .about {
     max-width: auto;;
@@ -116,7 +117,7 @@ h1{
     margin-bottom: 15px;
     font-size: 22px;
     font-weight: bold;
-    color: #AB3428;
+    color: #061B6F;
 
 }
 .feature p{
