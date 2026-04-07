@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<?php include 'header.php'; ?>
+
 <body>
 <section class="background-index">
-
-    <nav class="navbar">
-        <img src="pictures/color_map.jpeg" alt="Logo" class="logo">
-        <ul class="nav-links">
-            <li><a href="color.php">Color</a></li>
-            <li><a href="print.php">Print</a></li>
-            <li><a href="about.php">About</a></li>
-        </ul>
-    </nav>
 
     <nav class="padding-wrap-logo">
         <img src = "pictures/color_map.jpeg" alt="Logo" class="logo2" >
@@ -31,4 +16,5 @@
     </div>
 </nav>
 </body>
-</html>
+
+<?php include 'footer.php'; ?>

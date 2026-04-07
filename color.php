@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>  
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color</title>
-    <link rel="stylesheet" href="style.css">
+<?php include 'header.php'; ?>
 
-</head>
 <header>
     <h1>Color Coordinator</h1>
 </header>
@@ -33,5 +26,5 @@
         }
     ?>
 </body>
-</html>
+<?php include 'footer.php'; ?>
 
