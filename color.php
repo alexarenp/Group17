@@ -3,7 +3,7 @@
 <header>
     <h1>Color Coordinator</h1>
 </header>
-<body>
+
     <form action="color.php" method="GET">
         Rows and Columns: <input type="number" name="gridSize" required>
         <br>
@@ -109,6 +109,6 @@
             }
         }
     </script>
-</body>
+
 <?php include 'footer.php'; ?>
 
