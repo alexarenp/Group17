@@ -12,9 +12,9 @@ h1{
     color: #AB3428;
 }
 .about {
-    max-width: 600px;
+    max-width: auto;;
     font-size: 20px;
-    font: Arial;
+    font: Arial
 
 }
 .color-table {
@@ -127,4 +127,13 @@ h1{
 body{
     background-color: #F49E4C;
 
+}
+
+footer {
+    background-color: #2D7285;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 5px solid #F5EE9E;
 }

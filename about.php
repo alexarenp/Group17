@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+<?php include 'header.php'; ?>
 
-</head>
 <body>
     <h1>About Us</h1>
     <br>
@@ -26,6 +19,7 @@
     <div class="about">
         <p><strong>Rhett Long</strong></p>
         <p>I am a Computer Science major at CSU graduating this spring. I love the outdoors as well as a good TV show or movie.</p>
+        <img src="pictures/rhettcl.jpg" alt="Rhett Long" height = "300px" width = "200px">
     </div>
     <img src="pictures/rhettcl.jpg" alt="Rhett Long" height = "300px" width = "200px">
     <div class="about">
@@ -35,4 +29,5 @@
 
          <br>
 </body>
-</html>
+
+<?php include 'footer.php'; ?>
