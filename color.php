@@ -36,7 +36,9 @@
             }
         }
         $colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey", "Brown", "Black", "Teal"];
+        $alphabet = range('A', 'Z');
         if($validGridSize && $validNumColors) {
+            echo "<h2>Color Selection</h2>";
             echo "<table class='color-table'>";
             for($i = 0; $i < $numColors; $i++) {
                 $defaultColor = $colors[$i];
@@ -53,10 +55,28 @@
                 echo "<span class='color-preview' id='preview$i'></span>";
                 echo "</td>";
                 echo "</tr>";
-        }
+            }
+            echo "</table>";
+            echo "<h2>Coordinate Grid</h2>";
+            echo "<table class='coordinate-grid'>";
+            echo "<tr>";
+            echo "<td></td>";
+            for($col = 0; $col < $gridSize; $col++) {
+                echo "<td>" . $alphabet[$col] . "</td>";
+            }
+            echo "</tr>";
+            for($row = 0; $row < $gridSize; $row++) {
+                echo "<tr>";
+                echo "<td>" . ($row + 1) . "</td>";
+                for($col = 0; $col < $gridSize; $col++) {
+                    echo "<td></td>";
+                }
+                echo "</tr>";
+            }
             echo "</table>";
         }
     ?>
+
 
     <script>
         const colorMap = {

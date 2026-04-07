@@ -21,7 +21,6 @@
         <p>I am a Computer Science major at CSU graduating this spring. I love the outdoors as well as a good TV show or movie.</p>
         <img src="pictures/rhettcl.jpg" alt="Rhett Long" height = "300px" width = "200px">
     </div>
-    <img src="pictures/rhettcl.jpg" alt="Rhett Long" height = "300px" width = "200px">
     <div class="about">
         <p><strong>Dionicio Flores</strong></p>
         <p>I am a CS Student and CSU graduate. I am graduating this spring. I enjoy otord activies and cooking. I like web development since we wordk withe back and from end</p>
