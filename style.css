@@ -198,4 +198,8 @@ footer {
 
 .member p {
     margin: 5px 0;
+    margin: 20px auto;
+    display: block;
+    font-size: 16px;
 }
+
