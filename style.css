@@ -158,3 +158,8 @@ footer {
 .main-content {
     flex: 1;
 }
+.makeprint {
+    position: fixed;
+    bottom: 100px;
+    right: 750px;
+}
