@@ -11,8 +11,8 @@
         $colorList[] = $_GET["color" . (string) $i];
     }
     echo "<h2>Color Selection</h2>";
+    echo "<table class='color-table'>";
     for($i = 0; $i < $numColors; $i++) {
-        echo "<table class='color-table'>";
         echo "<tr>";
         echo "<td>" . $colorList[$i];
         echo "<td>" . "      ";
