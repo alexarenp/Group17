@@ -163,3 +163,40 @@ footer {
     bottom: 100px;
     right: 750px;
 }
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.member {
+    width: 250px;
+    height: auto;
+    text-align: center;
+    color: #061B6F;
+    background-color: #F5EE9E;
+    border-radius: 5px;
+    border-top: 5px solid #2D7285;
+    padding-bottom: 15px;
+}
+
+.member p {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px 0;
+}
+
+.member img {
+    width: 200px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 5px solid #061B6F;
+    margin-top: 10px; 
+}
+
+
+
