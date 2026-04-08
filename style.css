@@ -127,6 +127,9 @@ h1{
 
 body{
     background-color: #F49E4C;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -137,4 +140,7 @@ footer {
     padding: 20px;
     margin-top: 40px;
     border-top: 5px solid #F5EE9E;
+}
+.main-content {
+    flex: 1;
 }
