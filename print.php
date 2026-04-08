@@ -5,7 +5,6 @@ include 'header.php';?>
 <header>
     <h1>Print</h1>
 </header>
-<div class="print-wrapper">
 
 <?php
     $gridSize = $_GET["gridSize"];
@@ -43,6 +42,5 @@ include 'header.php';?>
     echo "</table>";
 ?>
 
-</div>
 
 <?php include 'footer.php'; ?>
