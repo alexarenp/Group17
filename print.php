@@ -1,0 +1,43 @@
+<?php include 'header.php'; ?>
+<header>
+    <h1>Print</h1>
+</header>
+
+<?php
+    $gridSize = $_GET["gridSize"];
+    $numColors = $_GET["numColors"];
+    $colorList = [];
+    for($i = 0; $i < $numColors; $i++) {
+        $colorList[] = $_GET["color" . (string) $i];
+    }
+    echo "<h2>Color Selection</h2>";
+    for($i = 0; $i < $numColors; $i++) {
+        echo "<table class='color-table'>";
+        echo "<tr>";
+        echo "<td>" . $colorList[$i];
+        echo "<td>" . "      ";
+        echo "</tr>";
+    }
+    echo "</table>";
+    $alphabet = range('A', 'Z');
+    echo "<h2>Coordinate Grid</h2>";
+    echo "<table class='coordinate-grid'>";
+    echo "<tr>";
+    echo "<td></td>";
+    for($col = 0; $col < $gridSize; $col++) {
+        echo "<td>" . $alphabet[$col] . "</td>";
+    }
+    echo "</tr>";
+    for($row = 0; $row < $gridSize; $row++) {
+        echo "<tr>";
+        echo "<td>" . ($row + 1) . "</td>";
+        for($col = 0; $col < $gridSize; $col++) {
+            echo "<td></td>";
+        }
+            echo "</tr>";
+    }
+    echo "</table>";
+?>
+
+
+<?php include 'footer.php'; ?>
