@@ -36,6 +36,9 @@ h2 {
 .color-table td:last-child {
     width: 80%;
 }
+.color-table td{ 
+    border: 1px solid black;
+}
 
 .color-preview {
     display: block;  
