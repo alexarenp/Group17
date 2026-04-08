@@ -159,7 +159,7 @@ footer {
     flex: 1;
 }
 .makeprint {
-    position: fixed;
-    bottom: 100px;
-    right: 750px;
+    margin: 20px auto;
+    display: block;
+    font-size: 16px;
 }

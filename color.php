@@ -11,9 +11,6 @@
         <br>
         <button type="submit">Submit</button>
     </form>
-    <form action="color.php" method="POST">
-        <button class="makeprint" type="submit" name="printButton">Print</button>
-    </form>
 
     <div id="duplicate-msg">That color is already in use. Your selection has been reverted.</div>
         <?php
@@ -78,6 +75,11 @@
                 echo "</tr>";
             }
             echo "</table>";
+            ?>
+            <form action="print.php" method="POST">
+                <button class="makeprint" type="submit" name="printButton">Print</button>
+            </form>
+            <?php   
         }
         if(isset($_POST["printButton"])) {
             header("Location: print.php");
@@ -136,6 +138,20 @@
                 msgEl.style.display = 'none';
             }
         }
+
+        document.querySelector('form[action="print.php"]').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Grab gridSize and numColors already in the URL
+            const params = new URLSearchParams(window.location.search);
+
+            // Add each currently selected color
+            document.querySelectorAll('select[id^="color"]').forEach(function(sel) {
+                params.set(sel.name, sel.value);
+            });
+
+            window.location.href = 'print.php?' + params.toString();
+        });
     </script>
 
 <?php include 'footer.php'; ?>
