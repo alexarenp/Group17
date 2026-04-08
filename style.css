@@ -12,6 +12,10 @@ h1{
     text-align: center;
     color: #061B6F;
 }
+h2 {
+    text-align: center;
+    color: #061B6F;
+}
 .about {
     max-width: auto;;
     font-size: 20px;
@@ -48,6 +52,16 @@ h1{
     background: #fff3cd;
     border: 1px solid #ffc107;
     border-radius: 4px;
+}
+.coordinate-grid {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+.coordinate-grid td {
+    border: 1px solid #000000;
+    width: 40px;
+    height: 40px;
+    text-align: center;
 }
 * {
     margin: 0;
