@@ -128,8 +128,3 @@ body{
     background-color: #F49E4C;
 
 }
-form[name="makeprint"] {
-    position: fixed;
-    bottom: 20px;
-    right: 200px;
-}

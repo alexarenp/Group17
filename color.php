@@ -18,8 +18,8 @@
         <br>
         <button type="submit">Submit</button>
     </form>
-    <form name="makeprint" action="color.php" method=POST>
-        <button type="submit" name="printButton">Print</button>
+    <form action="color.php" method="POST">
+        <button class="makeprint" type="submit" name="printButton">Print</button>
     </form>
     <div id="duplicate-msg">That color is already in use. Your selection has been reverted.</div>
         <?php
