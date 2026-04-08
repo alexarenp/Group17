@@ -1,7 +1,11 @@
-<?php include 'header.php'; ?>
+<?php
+$bodyClass = "print-page";
+include 'header.php';?>
+
 <header>
     <h1>Print</h1>
 </header>
+<div class="print-wrapper">
 
 <?php
     $gridSize = $_GET["gridSize"];
@@ -39,5 +43,6 @@
     echo "</table>";
 ?>
 
+</div>
 
 <?php include 'footer.php'; ?>

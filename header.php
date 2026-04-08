@@ -6,7 +6,7 @@
     <title>Color Map Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="<?php echo $bodyClass ?? ''; ?>">
     <header>
         <nav class="navbar">
             <img src="pictures/color_map.jpeg" alt="Logo" class="logo">
@@ -17,4 +17,4 @@
             </ul>
         </nav>
     </header>
-<nav class = "main-content">
+<main class = "main-content">
