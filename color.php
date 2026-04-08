@@ -1,15 +1,25 @@
-<?php include 'header.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    <link rel="stylesheet" href="style.css">
 
+</head>
 <header>
     <h1>Color Coordinator</h1>
 </header>
-
+<body>
     <form action="color.php" method="GET">
         Rows and Columns: <input type="number" name="gridSize" required>
         <br>
         Colors: <input type="number" name="numColors" required>
         <br>
         <button type="submit">Submit</button>
+    </form>
+    <form action="color.php" method="POST">
+        <button class="makeprint" type="submit" name="printButton">Print</button>
     </form>
     <div id="duplicate-msg">That color is already in use. Your selection has been reverted.</div>
         <?php
@@ -36,9 +46,7 @@
             }
         }
         $colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey", "Brown", "Black", "Teal"];
-        $alphabet = range('A', 'Z');
         if($validGridSize && $validNumColors) {
-            echo "<h2>Color Selection</h2>";
             echo "<table class='color-table'>";
             for($i = 0; $i < $numColors; $i++) {
                 $defaultColor = $colors[$i];
@@ -55,28 +63,14 @@
                 echo "<span class='color-preview' id='preview$i'></span>";
                 echo "</td>";
                 echo "</tr>";
-            }
-            echo "</table>";
-            echo "<h2>Coordinate Grid</h2>";
-            echo "<table class='coordinate-grid'>";
-            echo "<tr>";
-            echo "<td></td>";
-            for($col = 0; $col < $gridSize; $col++) {
-                echo "<td>" . $alphabet[$col] . "</td>";
-            }
-            echo "</tr>";
-            for($row = 0; $row < $gridSize; $row++) {
-                echo "<tr>";
-                echo "<td>" . ($row + 1) . "</td>";
-                for($col = 0; $col < $gridSize; $col++) {
-                    echo "<td></td>";
-                }
-                echo "</tr>";
-            }
+        }
             echo "</table>";
         }
+        if(isset($_POST["printButton"])) {
+            header("Location: print.php");
+            exit();
+        }
     ?>
-
 
     <script>
         const colorMap = {
@@ -129,6 +123,6 @@
             }
         }
     </script>
-
-<?php include 'footer.php'; ?>
+</body>
+</html>
 
