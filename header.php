@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="<?php echo $bodyClass ?? ''; ?>">
+    <?php if (($bodyClass ?? '') != 'print-page') { ?>
     <header>
         <nav class="navbar">
             <img src="pictures/color_map.jpeg" alt="Logo" class="logo">
@@ -17,4 +18,5 @@
             </ul>
         </nav>
     </header>
+    <?php } ?>
 <main class = "main-content">
