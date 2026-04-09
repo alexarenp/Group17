@@ -200,3 +200,17 @@ footer {
     border: 5px solid #061B6F;
     margin-top: 10px; 
 }
+.print-page {
+    background-color: #f3f3f3;
+    color: #000000;
+}
+
+.print-page header {
+    background-color: #f3f3f3;
+    color: #000000;
+}
+.print-page * {
+    color: black !important;
+    background-color: transparent !important;
+    border-color: black !important;
+}
