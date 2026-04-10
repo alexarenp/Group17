@@ -3,11 +3,11 @@
 <body>
 <section class="background-index">
 
-    <nav class="padding-wrap-logo">
-        <img src = "pictures/color_map.jpeg" alt="Logo" class="logo2" >
-    </nav>
 
-    <h1>Welcome to Color Map Generator</h1>
+    <div class="welcome-Message">Welcome to Color Map
+     <p>Color Map is a tool designed to help you create structured color grids for your projects. Whether you're an artist, designer, or just someone who loves working with colors, Color Map provides an easy way to organize and label your color selections.</p>
+    </div>
+    <Color Map is a tool designed to help you create structured color grids for your projects. Whether you're an artist, designer, or just someone who loves working with colors, Color Map provides an easy way to organize and label your color selections.</p>
 
     <div class="features">
         <div class="feature"><h3>Color Mapping:</h3> <p>Generate structured color grids to organize and label your selections clearly.</p> </div>
