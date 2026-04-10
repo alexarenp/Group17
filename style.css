@@ -76,7 +76,7 @@ h2 {
     display: flex;
     align-items: center;
     padding: 20px 40px;
-    background-color: #2D7285;
+    background-color: #26606E;
 }
 
 .nav-links {
@@ -151,7 +151,7 @@ body{
 }
 
 footer {
-    background-color: #2D7285;
+    background-color: #26606E;
     color: white;
     text-align: center;
     padding: 20px;
