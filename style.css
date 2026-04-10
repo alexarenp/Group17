@@ -4,8 +4,23 @@ COLORS:
 #3B8EA5 - Medium Blue
 #F5EE9E - Light Yellow
 #F49E4C - Orange
-#AB3428 - Red
+#882920 - Red
 #061B6F - Darker Blue (better for contrast)
+*/
+
+/* 
+Comments for all of the color contrasts:
+Yellow background color (f5ee9e) and welcome message (882920)
+    -Contrast score: 7.38
+Yellow background color (f5ee9e) and blue text (061b6f)
+    -Contrast score: 12.58
+Orange box background color (f49e4c) and blue text (061b6f)
+    -Contrast score: 7.05
+Orange box background color (f49e4c) and black text 
+    -Contrast score: 9.84
+Blue header/footer background color (26606E) and white text
+    -Contrast score: 7.04
+
 */
 
 h1{
@@ -239,7 +254,7 @@ footer {
 .welcome-Message {
     text-align: center;
     font-size: 60px;
-    color:#AB3428;
+    color:#882920;
     margin-top: 20px;
 }
 .welcome-Message p {
