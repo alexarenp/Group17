@@ -129,6 +129,7 @@ h2 {
     padding: 20px;
     border: 1px solid #F5EE9E;   
     border-radius: 8px; 
+    background-color: #F49E4C;
 }
 .feature h3 {
     margin-bottom: 15px;
@@ -143,7 +144,7 @@ h2 {
 }
 
 body{
-    background-color: #F49E4C;
+    background-color: #F5EE9E;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -180,7 +181,7 @@ footer {
     height: auto;
     text-align: center;
     color: #061B6F;
-    background-color: #F5EE9E;
+    background-color:#F49E4C ;
     border-radius: 5px;
     border-top: 5px solid #2D7285;
     padding-bottom: 15px;
@@ -214,3 +215,39 @@ footer {
     background-color: transparent !important;
     border-color: black !important;
 }
+
+.greyscale-logo {
+    filter: grayscale(100%);
+    width: 80px;          
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.print-header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.print-header h2 {
+    margin: 0;
+    color: #000;      
+}
+
+.welcome-Message {
+    text-align: center;
+    font-size: 60px;
+    color:#AB3428;
+    margin-top: 20px;
+}
+.welcome-Message p {
+    font-size: 24px;
+    color: #061B6F;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+

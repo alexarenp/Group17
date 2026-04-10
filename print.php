@@ -2,8 +2,13 @@
 $bodyClass = "print-page";
 include 'header.php';?>
 
+<div class="print-header">
+    <img src="pictures/color_map.jpeg" alt="Company Logo" class="greyscale-logo">
+    <h2>Color Map</h2>
+</div>
+
 <header>
-    <h1>Print</h1>
+    <h1>Print view</h1>
 </header>
 
 <?php
