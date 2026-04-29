@@ -45,6 +45,11 @@
                 $defaultColor = $colors[$i];
                 echo "<tr>";
                 echo "<td>";
+                if ($i == 0) {
+                    echo "<input type='radio' name='activeColor' value='$i' checked>";
+                } else {
+                    echo "<input type = 'radio' name = 'activeColor' value='$i'>";
+                }
                 echo "<select name='color$i' id='color$i' data-index='$i' onchange='updateColor(this)'>"; 
                 foreach($colors as $index => $color) {
                     $selected = ($index == $i) ? "selected" : "";
@@ -52,9 +57,7 @@
                 }
                 echo '</select>';
                 echo "</td>";
-                echo "<td>";
-                echo "<span class='color-preview' id='preview$i'></span>";
-                echo "</td>";
+                echo "<td id='coords$i'></td>";
                 echo "</tr>";
             }
             echo "</table>";
@@ -70,7 +73,9 @@
                 echo "<tr>";
                 echo "<td>" . ($row + 1) . "</td>";
                 for($col = 0; $col < $gridSize; $col++) {
-                    echo "<td></td>";
+                    $coordinate = $alphabet[$col] . ($row + 1);
+                    echo "<td class= 'paint-cell' data-coordinate='$coordinate'></td>";
+                    
                 }
                 echo "</tr>";
             }
@@ -89,6 +94,29 @@
 
 
     <script>
+        let indexInGrid = 0;
+        const coordsList = {};
+        const trackCells = {};
+
+        function sortCoords(a,b) {
+            const Aletter= a.match(/[A-Z]+/)[0];
+            const Anum = parseInt(a.match(/\d+/)[0]);
+
+            const Bletter = b.match(/[A-Z]+/)[0];
+            const Bnum = parseInt(b.match(/\d+/)[0]);
+
+            if (Aletter !== Bletter) {
+                return Aletter.localeCompare(Bletter);
+            }
+            return Anum - Bnum;
+        }
+
+        function newCoordGenerator(rowIndex) {
+            const list = coordsList[rowIndex] || [];
+            list.sort(sortCoords);
+            document.getElementById('coords' + rowIndex).textContent = list.join(', ');
+        }
+
         const colorMap = {
             "Red":    "#e74c3c",
             "Orange": "#e67e22",
@@ -106,12 +134,43 @@
         document.querySelectorAll('select[id^="color"]').forEach(function(sel) {
             const idx = sel.dataset.index;
             previousValues[idx] = sel.value;
-            // Set initial preview color from JS colorMap
-            const preview = document.getElementById('preview' + idx);
-            if (preview) {
-                preview.style.backgroundColor = colorMap[sel.value] || '#fff';
-            }
+
         });
+        document.querySelectorAll('input[name="activeColor"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                indexInGrid = this.value;
+            });
+        });
+        document.querySelectorAll('.paint-cell').forEach(function(cell) {
+            cell.addEventListener('click', function() {
+                const coordinate = this.dataset.coordinate;
+                const oldOwner = trackCells[coordinate];
+                if (oldOwner !== undefined && oldOwner !== indexInGrid) {
+                    coordsList[oldOwner] = coordsList[oldOwner].filter(function(item) {
+                        return item !== coordinate;
+                    });
+                    newCoordGenerator(oldOwner);
+                }
+
+                if (!coordsList[indexInGrid]) {
+                    coordsList[indexInGrid] = [];
+                }
+                if (!coordsList[indexInGrid].includes(coordinate)){
+                    coordsList[indexInGrid].push(coordinate);
+                }
+
+                trackCells[coordinate] = indexInGrid;
+
+                const selectedBox = document.getElementById('color' + indexInGrid);
+                const currentColor = selectedBox.value;
+                this.style.backgroundColor = colorMap[currentColor];
+
+                newCoordGenerator(indexInGrid);
+                
+            });
+        });
+
+
  
         function updateColor(selectEl) {
             const idx = selectEl.dataset.index;
@@ -131,11 +190,17 @@
                 setTimeout(function() { msgEl.style.display = 'none'; }, 3500);
             } else {
                 previousValues[idx] = newColor;
-                const preview = document.getElementById('preview' + idx);
-                if (preview) {
-                    preview.style.backgroundColor = colorMap[newColor] || '#fff';
-                }
+
                 msgEl.style.display = 'none';
+
+                if (coordsList[idx]){
+                    coordsList[idx].forEach(function(coordinate) {
+                        const cell = document.querySelector('[data-coordinate="' + coordinate + '"]');
+                        if (cell) {
+                            cell.style.backgroundColor = colorMap[newColor];
+                        }
+                    })
+                }
             }
         }
 
