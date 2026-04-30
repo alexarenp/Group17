@@ -5,9 +5,9 @@
 </header>
 
     <form action="color.php" method="GET">
-        Rows and Columns: <input type="number" name="gridSize" required>
+        Rows and Columns: <input type="number" name="gridSize" placeholder="Enter grid size (1-26)" required>
         <br>
-        Colors: <input type="number" name="numColors" required>
+        Colors: <input type="number" name="numColors" placeholder="Enter num colors (1-10)" required>
         <br>
         <button type="submit">Submit</button>
     </form>
