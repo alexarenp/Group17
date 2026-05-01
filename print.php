@@ -38,10 +38,12 @@ include 'header.php';?>
     for($i = 0; $i < $numColors; $i++) {
         $nowColor = $colorList[$i];
         $colorCode = $colorMap[$nowColor];
+        $coordinateVals = $_GET["coords" . $i] ?? "";
+
 
         echo "<tr>";
         echo "<td>" . $nowColor . " - " . $colorCode . "</td>";
-        echo "<td></td>";
+        echo "<td>" . $coordinateVals . "</td>";
         echo "</tr>";
     }
 

@@ -215,6 +215,10 @@
                 params.set(sel.name, sel.value);
             });
 
+            document.querySelectorAll('td[id^="coords"]').forEach(function(cell) {
+                params.set(cell.id, cell.textContent);});
+
+
             window.location.href = 'print.php?' + params.toString();
         });
     </script>
