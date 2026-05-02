@@ -15,17 +15,38 @@ include 'header.php';?>
     $gridSize = $_GET["gridSize"];
     $numColors = $_GET["numColors"];
     $colorList = [];
+
+
+    $colorMap = [
+        "Red" => "#e74c3c",
+        "Orange" => "#e67e22",
+        "Yellow" => "#f1c40f",
+        "Green" => "#27ae60",
+        "Blue" => "#2980b9",
+        "Purple" => "#8e44ad",
+        "Grey" => "#95a5a6",
+        "Brown" => "#7f5539",
+        "Black" => "#2c2c2c",
+        "Teal" => "#008080"
+    ];
+
     for($i = 0; $i < $numColors; $i++) {
         $colorList[] = $_GET["color" . (string) $i];
     }
     echo "<h2>Color Selection</h2>";
     echo "<table class='color-table'>";
     for($i = 0; $i < $numColors; $i++) {
+        $nowColor = $colorList[$i];
+        $colorCode = $colorMap[$nowColor];
+        $coordinateVals = $_GET["coords" . $i] ?? "";
+
+
         echo "<tr>";
-        echo "<td>" . $colorList[$i];
-        echo "<td>" . "      ";
+        echo "<td>" . $nowColor . " - " . $colorCode . "</td>";
+        echo "<td>" . $coordinateVals . "</td>";
         echo "</tr>";
     }
+
     echo "</table>";
     $alphabet = range('A', 'Z');
     echo "<h2>Coordinate Grid</h2>";
