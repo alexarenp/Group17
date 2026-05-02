@@ -1,23 +1,5 @@
 # CS312Group17
 
-db.php
-
-# Backup files
-*.bak
-*.swp
-*.swo
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Log files
-*.log
- 33 changes: 33 additions & 0 deletions33  
-README.md
-Original file line number	Original file line	Diff line number	Diff line change
-@@ -1 +1,34 @@
-# CS312Group17	# CS312Group17
 
 ## Database access
 
